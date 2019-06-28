@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace AspNetCoreAppInsights.WebApi.Controllers
 {
@@ -10,10 +11,19 @@ namespace AspNetCoreAppInsights.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly ILogger<ValuesController> _logger;
+
+        public ValuesController(ILogger<ValuesController> logger)
+        {
+            _logger = logger;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            _logger.LogInformation("ValuesController - Info - GET Method was Hit!");
+
             return new string[] { "value1", "value2" };
         }
 

@@ -28,6 +28,10 @@ For now, we really just need AspNetCoreAppInsightsSeries-local as we will just r
 
 ![2019-06-28_10-03-28](https://user-images.githubusercontent.com/27027488/60522716-21b17a80-9caf-11e9-96e5-1a331b99dfa4.png)
 
+Once the instance is created, copy the instrumentation key as we will need this later.
+
+![2019-06-28_10-05-51](https://user-images.githubusercontent.com/27027488/60524026-6b9b6000-9cb1-11e9-96c4-51d2f99bd67e.png)
+
 ## Create the ASP.NET Core Web App.
 
 ![2019-06-28_9-45-47](https://user-images.githubusercontent.com/27027488/60522552-d5fed100-9cae-11e9-94d0-448b1eb50831.png)
@@ -74,6 +78,9 @@ Check how this looks in the App Insights Page
 We can see that we are getting some data in!
 
 Out of the overview page alone we can see the number of requests, response times, and any failed requests. (Notice the failed request as well, we will come back to that later)
+
+![2019-06-28_10-26-57](https://user-images.githubusercontent.com/27027488/60524053-79e97c00-9cb1-11e9-97fe-e6b9a2d8ccd6.png)
+
 
 Let view our Logs. On the left pane, click "Search" and hit "refresh". Here we can see the log of our values/Get Request.
 
